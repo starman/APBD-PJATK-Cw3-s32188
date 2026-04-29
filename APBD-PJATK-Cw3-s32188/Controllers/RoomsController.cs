@@ -38,7 +38,7 @@ public class RoomsController : ControllerBase
             : Ok(room);
     }
     
-    [HttpGet("{buildingCode}")]
+    [HttpGet("building/{buildingCode}")]
     public IActionResult GetById([FromRoute] string buildingCode)
     {
         var rooms = AppData.Rooms
